@@ -30,7 +30,7 @@ public class SiteController {
     }
     @PostMapping ("/login")
     public String checkIfLogedIn(@RequestParam String email,@RequestParam String password, HttpSession httpSession){
-        httpSession.setAttribute("isLogedIn",true);
+        httpSession.setAttribute("isLogin",true);
         databaseCon.checkLogin(email,password);
         return "redirect:/";
     }
@@ -38,5 +38,13 @@ public class SiteController {
     @GetMapping ("/register")
     public String createUser() {
         return "register";
+    }
+
+
+    @PostMapping("/register")
+    public String checkRegister(@RequestParam String firstname,@RequestParam String lastname,  @RequestParam String email, @RequestParam String password, @RequestParam String confirmPassword) {
+        databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
+        System.out.println(email + " " + password + " " + confirmPassword);
+        return "login";
     }
 }

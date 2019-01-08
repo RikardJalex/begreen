@@ -14,7 +14,7 @@ public class DatabaseCon {
         System.out.println("Creating connection..");
         try {
             System.out.println("uppkopplad");
-            return DriverManager.getConnection(url, "root", "lösenord");
+            return DriverManager.getConnection(url, "root", "Offer123");
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
@@ -51,7 +51,7 @@ public class DatabaseCon {
 
 
         try {
-            String query = "select * from user where Email =? and Password =? ";
+            String query = "select * from users where Email =? and Password =? ";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1,email);
             stmt.setString(2,password);
@@ -68,4 +68,5 @@ public class DatabaseCon {
         }
         return false;
     }
+
 }
