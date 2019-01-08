@@ -26,13 +26,17 @@ public class SiteController {
     @GetMapping ("/login")
     public String login(){
 
-        return "index";
+        return "login";
     }
     @PostMapping ("/login")
-    public String checkIfLogedIn(@RequestParam String username, String password, Model model, HttpSession httpSession){
+    public String checkIfLogedIn(@RequestParam String email,@RequestParam String password, HttpSession httpSession){
         httpSession.setAttribute("isLogedIn",true);
-        databaseCon.checkLogin(username,password);
+        databaseCon.checkLogin(email,password);
         return "redirect:/";
+    }
 
+    @GetMapping ("/register")
+    public String createUser() {
+        return "register";
     }
 }
