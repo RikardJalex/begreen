@@ -6,26 +6,34 @@
           crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/LogIn.css">
+    <link rel="stylesheet" href="/css/Navbar.css">
+    <link rel="stylesheet" href="/css/Footer.css">
+    <link rel="stylesheet" href="/css/Index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="navigation">
     <a class="navbar-brand" href="/index">
-        <i class="fas fa-gamepad fa-2x"></i>
+        <i class="fas fa-globe-americas"></i>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/index">Rate Games</a>
+    <a class="navbar-brand" href="/index">BeGreen</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <form class="form-inline my-2 mx-auto my-lg-0" action="/search" method="post">
             <div class="search-group">
                 <input class="form-control mr-sm-2" name="searchword" type="search" placeholder="Search"
                        aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"
-                                                                                      id="btn-search"></i></button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                    <i class="fas fa-search" id="btn-search"></i></button>
             </div>
         </form>
 
@@ -49,6 +57,42 @@
     </div>
 </nav>
 <h1>Go green!</h1>
+
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h5>BeGreen!</h5>
+                <hr class="light">
+                <p>Our vision is to inspire</p>
+                <p>you to be the most eco-friendly</p>
+                <p>person that you can be</p>
+
+            </div>
+            <div class="col-md-4">
+
+                <h5>Contact</h5>
+                <hr class="light">
+                <p>+46735896241</p>
+                <p>contact@BeGreen.com</p>
+                <p>Stockholm, Sweden</p>
+            </div>
+            <div class="col-md-4">
+
+                <h5>Useful Links</h5>
+                <hr class="light">
+                <a href="index.html">Get to know the team</a><br><br>
+                <a href="index.html">Why is Begreen needed?</a><br><br>
+                <a href="index.html">Sign up!</a><br><br>
+
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; BeGreen</h5>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
