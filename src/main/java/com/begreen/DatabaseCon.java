@@ -51,7 +51,7 @@ public class DatabaseCon {
 
 
         try {
-            String query = "select * from users where name =? and password =? ";
+            String query = "select * from users where Email =? and password =? ";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1,username);
             stmt.setString(2,password);
