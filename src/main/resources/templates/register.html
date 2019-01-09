@@ -18,41 +18,42 @@
     <title>Document</title>
 </head>
 <body>
+<nav th:replace="~{/layout :: nav}"></nav>
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="navigation">
-    <a class="navbar-brand" href="/index">
-        <i class="fas fa-globe-americas"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="/index">BeGreen</a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <form class="form-inline my-2 mx-auto my-lg-0" action="/search" method="post">
-            <div class="search-group">
-                <input class="form-control mr-sm-2" name="searchword" type="search" placeholder="Search"
-                       aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-                    <i class="fas fa-search" id="btn-search"></i></button>
-            </div>
-        </form>
-        <nav class="navbar navbar-light bg-light">
-            <form class="form-inline profile">
-                <a href="/profile"><i class="fas fa-user"></i> Profile</a>
-            </form>
-            <form class="form-inline" action="/logout" method="get">
-                <button class="btn btn-outline-primary ml-sm-2" type="submit">Log out</button>
-            </form>
-        </nav>
-        <nav class="navbar navbar-light bg-light" >
-            <form class="form-inline" action="/login" method="get">
-                <button class="btn btn-primary " type="submit">Log in</button>
-            </form>
-            <form class="form-inline" action="/register" method="get">
-                <button class="btn btn-outline-primary ml-sm-2" type="submit">Sign up</button>
-            </form>
-        </nav>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="navigation">-->
+    <!--<a class="navbar-brand" href="/index">-->
+        <!--<i class="fas fa-globe-americas"></i>-->
+    <!--</a>-->
+    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"-->
+            <!--aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">-->
+        <!--<span class="navbar-toggler-icon"></span>-->
+    <!--</button>-->
+    <!--<a class="navbar-brand" href="/index">BeGreen</a>-->
+    <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
+        <!--<form class="form-inline my-2 mx-auto my-lg-0" action="/search" method="post">-->
+            <!--<div class="search-group">-->
+                <!--<input class="form-control mr-sm-2" name="searchword" type="search" placeholder="Search"-->
+                       <!--aria-label="Search">-->
+                <!--<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">-->
+                    <!--<i class="fas fa-search" id="btn-search"></i></button>-->
+            <!--</div>-->
+        <!--</form>-->
+        <!--<nav class="navbar navbar-light bg-light">-->
+            <!--<form class="form-inline profile">-->
+                <!--<a href="/profile"><i class="fas fa-user"></i> Profile</a>-->
+            <!--</form>-->
+            <!--<form class="form-inline" action="/logout" method="get">-->
+                <!--<button class="btn btn-outline-primary ml-sm-2" type="submit">Log out</button>-->
+            <!--</form>-->
+        <!--</nav>-->
+        <!--<nav class="navbar navbar-light bg-light" >-->
+            <!--<form class="form-inline" action="/login" method="get">-->
+                <!--<button class="btn btn-primary " type="submit">Log in</button>-->
+            <!--</form>-->
+            <!--<form class="form-inline" action="/register" method="get">-->
+                <!--<button class="btn btn-outline-primary ml-sm-2" type="submit">Sign up</button>-->
+            <!--</form>-->
+        <!--</nav>-->
     </div>
 </nav>
 <!-- Input -->

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -46,5 +48,13 @@ public class SiteController {
         databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
         System.out.println(email + " " + password + " " + confirmPassword);
         return "login";
+    }
+    @GetMapping("/logout")
+    public String logout(HttpSession session, HttpServletResponse res) {
+        session.invalidate();
+        Cookie cookie = new Cookie("sessionId", "");
+        cookie.setMaxAge(0);
+        res.addCookie(cookie);
+        return "redirect:/";
     }
 }
