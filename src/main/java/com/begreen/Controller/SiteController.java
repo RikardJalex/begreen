@@ -66,4 +66,22 @@ public class SiteController {
         res.addCookie(cookie);
         return "redirect:/";
     }
+    @GetMapping("/team")
+    public String team(){
+        return "team";
+    }
+    @GetMapping("/whyneeded")
+    public String wheneeded(){
+        return "whyneeded";
+    }
+    @GetMapping("/input")
+    public String input(){
+        return "input";
+    }
+
+    @GetMapping("/terms")
+    public String terms(){
+        return "terms";
+    }
+
 }

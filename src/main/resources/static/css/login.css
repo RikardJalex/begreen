@@ -148,3 +148,9 @@
 .not-a-user:focus{
     color: rgb(12, 97, 33);
 }
+.terms{
+text-align: left !important;
+}
+.registerlink{
+color: #0000EE !important;
+}

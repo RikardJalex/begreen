@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/LogIn.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-          crossorigin="anonymous">
-</head>
-<body>
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:spanth="http://www.w3.org/1999/XSL/Transform">
 <head>
@@ -34,41 +20,7 @@
 </head>
 <body>
 <nav th:replace="~{/layout :: nav}"></nav>
-<!-- navbar -->
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="navigation">-->
-    <!--<a class="navbar-brand" href="/index">-->
-        <!--<i class="fas fa-globe-americas"></i>-->
-    <!--</a>-->
-    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"-->
-            <!--aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">-->
-        <!--<span class="navbar-toggler-icon"></span>-->
-    <!--</button>-->
-    <!--<a class="navbar-brand" href="/index">BeGreen</a>-->
-    <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
-        <!--<form class="form-inline my-2 mx-auto my-lg-0" action="/search" method="post">-->
-            <!--<div class="search-group">-->
-                <!--<input class="form-control mr-sm-2" name="searchword" type="search" placeholder="Search"-->
-                       <!--aria-label="Search">-->
-                <!--<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">-->
-                    <!--<i class="fas fa-search" id="btn-search"></i></button>-->
-            <!--</div>-->
-        <!--</form>-->
-        <!--<nav class="navbar navbar-light bg-light">-->
-            <!--<form class="form-inline profile">-->
-                <!--<a href="/profile"><i class="fas fa-user"></i> Profile</a>-->
-            <!--</form>-->
-            <!--<form class="form-inline" action="/logout" method="get">-->
-                <!--<button class="btn btn-outline-primary ml-sm-2" type="submit">Log out</button>-->
-            <!--</form>-->
-        <!--</nav>-->
-        <!--<nav class="navbar navbar-light bg-light" >-->
-            <!--<form class="form-inline" action="/login" method="get">-->
-                <!--<button class="btn btn-primary " type="submit">Log in</button>-->
-            <!--</form>-->
-            <!--<form class="form-inline" action="/register" method="get">-->
-                <!--<button class="btn btn-outline-primary ml-sm-2" type="submit">Sign up</button>-->
-            <!--</form>-->
-        <!--</nav>-->
+
     </div>
 </nav>
 <!-- Input -->
@@ -91,49 +43,22 @@
                         </div>
                         <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
                     </form><!-- /form -->
-                    <a href="#" class="forgot-password">
+                    <div>
+                    <a href="/whyneeded" class="forgot-password">
                         Forgot the password?
                     </a>
-                    <a href="#" class="not-a-user">
-                        Not a User? Sign Up Here!
+
+                        Not a User? Sign Up<a href="/register"  class="not-a-user registerlink"> Here!
+
                     </a>
+                    </div>
                 </div><!-- /card-container -->
             </div><!-- /container -->
         </div>
     </div>
 </div>
 <!-- Footer -->
-<footer>
-    <div class="container-fluid padding">
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h5>BeGreen!</h5>
-                <hr class="light">
-                <p>Our vision is to inspire</p>
-                <p>you to be the most eco-friendly</p>
-                <p>person that you can be</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Contact</h5>
-                <hr class="light">
-                <p>+46735896241</p>
-                <p>contact@BeGreen.com</p>
-                <p>Stockholm, Sweden</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Useful Links</h5>
-                <hr class="light">
-                <a href="index.html">Get to know the team</a><br><br>
-                <a href="index.html">Why is Begreen needed?</a><br><br>
-                <a href="index.html">Sign up!</a><br><br>
-            </div>
-            <div class="col-12">
-                <hr class="light-100">
-                <h5>&copy; BeGreen</h5>
-            </div>
-        </div>
-    </div>
-</footer>
+<footer th:replace="~{/layout :: footer}"></footer>
 </body>
 </html>
 
