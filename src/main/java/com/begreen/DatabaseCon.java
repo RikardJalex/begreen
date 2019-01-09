@@ -14,7 +14,7 @@ public class DatabaseCon {
         System.out.println("Creating connection..");
         try {
             System.out.println("uppkopplad");
-            return DriverManager.getConnection(url, "root", "Offer123");
+            return DriverManager.getConnection(url, "root", "lösenord");
         } catch (SQLException e) {
             e.printStackTrace();
             return null;

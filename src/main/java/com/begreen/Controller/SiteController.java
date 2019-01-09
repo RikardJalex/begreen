@@ -43,12 +43,21 @@ public class SiteController {
     }
 
 
-    @PostMapping("/register")
-    public String checkRegister(@RequestParam String firstname,@RequestParam String lastname,  @RequestParam String email, @RequestParam String password, @RequestParam String confirmPassword) {
+    @PostMapping("/profile")
+    public String checkRegister(@RequestParam String firstname,@RequestParam String lastname, @RequestParam String email, @RequestParam String password, @RequestParam String confirmPassword, HttpSession httpSession) {
         databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
         System.out.println(email + " " + password + " " + confirmPassword);
-        return "login";
+
+        httpSession.setAttribute("isLogin",true);
+        databaseCon.checkLogin(email, password);
+        return "profile";
     }
+
+    @GetMapping("/profile")
+    public String userLogin() {
+        return "profile";
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session, HttpServletResponse res) {
         session.invalidate();
