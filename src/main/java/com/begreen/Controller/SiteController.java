@@ -2,6 +2,7 @@ package com.begreen.Controller;
 
 
 import com.begreen.DatabaseCon;
+import com.begreen.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,8 +33,12 @@ public class SiteController {
     }
     @PostMapping ("/login")
     public String checkIfLogedIn(@RequestParam String email,@RequestParam String password, HttpSession httpSession){
-        httpSession.setAttribute("isLogin",true);
-        databaseCon.checkLogin(email,password);
+        httpSession.setAttribute("user",null);
+        User user= databaseCon.getUserLogin(email,password);
+        if (user==null){
+            return "redirect:/login";
+       }
+        httpSession.setAttribute("user",user);
         return "redirect:/";
     }
 
@@ -48,14 +53,20 @@ public class SiteController {
         databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
         System.out.println(email + " " + password + " " + confirmPassword);
 
-        httpSession.setAttribute("isLogin",true);
+        httpSession.setAttribute("user",true);
         databaseCon.checkLogin(email, password);
         return "profile";
     }
 
     @GetMapping("/profile")
-    public String userLogin() {
-        return "profile";
+    public String userLogin(Model model,HttpSession httpSession) {
+        if (httpSession.getAttribute("user")!=null){
+            User user = (User)httpSession.getAttribute("user");
+            model.addAttribute("user",user);
+            return "profile";
+        }
+
+        return "redirect:/";
     }
 
     @GetMapping("/logout")
@@ -83,5 +94,7 @@ public class SiteController {
     public String terms(){
         return "terms";
     }
+
+
 
 }

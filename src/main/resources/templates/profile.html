@@ -68,25 +68,25 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <form>
+                            <form th:object="${user}">
                                 <div class="form-group row">
                                     <label for="name" class="col-4 col-form-label">First Name</label>
                                     <div class="col-8">
-                                        <input id="name" name="name" placeholder="First Name" class="form-control here"
+                                        <input id="name" name="name" th:value="${user.firstname}" placeholder="firstname"  class="form-control here"
                                                type="text">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="lastname" class="col-4 col-form-label">Last Name</label>
                                     <div class="col-8">
-                                        <input id="lastname" name="lastname" placeholder="Last Name"
+                                        <input id="lastname" name="lastname" th:value="${user.lastname}" placeholder="lastname"
                                                class="form-control here" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="text" class="col-4 col-form-label">Email</label>
                                     <div class="col-8">
-                                        <input id="text" name="text" placeholder="Email" class="form-control here"
+                                        <input id="text" name="text" th:value="${user.email}" placeholder="Email" class="form-control here"
                                                required="required" type="text">
                                     </div>
                                 </div>

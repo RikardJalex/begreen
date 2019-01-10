@@ -46,6 +46,27 @@ public class DatabaseCon {
         }
         return false;
     }
+    public User getUserLogin(String email, String password){
+        try {
+            String query = "select * from users where Email =? and Password =? ";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1,email);
+            stmt.setString(2,password);
+            ResultSet resultSet = stmt.executeQuery();
+
+            while (resultSet.next()){
+                System.out.println("Logged in");
+                User user = new User(resultSet.getString("firstname"),
+                        resultSet.getString("lastname"),resultSet.getString("email"),resultSet.getInt("ID"));
+                return user;
+            }
+
+
+        }catch (SQLException e){
+            System.out.println("något gick fel" + e);
+        }
+        return null;
+    }
     public boolean checkLogin(String email,String password){
         System.out.println("Nu går vi in");
 
@@ -67,6 +88,30 @@ public class DatabaseCon {
             System.out.println("något gick fel" + e);
         }
         return false;
+    }
+
+    public User getUsers(int id) {
+
+
+        try {
+            String query = "select * from users where ID=? ";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1,id);
+
+            ResultSet resultSet = stmt.executeQuery();
+
+            while (resultSet.next()){
+                User user = new User(resultSet.getString("firstname"),
+                        resultSet.getString("lastname"),resultSet.getString("email"),resultSet.getInt("ID"));
+                return user;
+            }
+
+
+        }catch (SQLException e){
+            System.out.println("något gick fel" + e);
+        }
+
+        return new User();
     }
 
 }
