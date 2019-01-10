@@ -17,7 +17,7 @@
     </button>
     <a class="navbar-brand" href="/">BeGreen</a>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="collapse navbar-collapse justify-content-end"  id="navbarTogglerDemo03">
         <!--<form class="form-inline my-2 mx-auto my-lg-0" action="/search" method="post">-->
             <!--<div class="search-group">-->
                 <!--<input class="form-control mr-sm-2" name="searchword" type="search" placeholder="Search"-->
@@ -27,7 +27,7 @@
             <!--</div>-->
         <!--</form>-->
 
-        <nav class="navbar navbar-light bg-light justify-content-end" th:if="${session.user}">
+        <nav class="navbar navbar-light bg-light " th:if="${session.user}">
             <form class="form-inline profile">
                 <a href="/profile"><i class="fas fa-user"></i> Profile</a>
             </form>

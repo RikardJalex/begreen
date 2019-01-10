@@ -86,8 +86,14 @@ public class SiteController {
         return "whyneeded";
     }
     @GetMapping("/input")
-    public String input(){
-        return "input";
+    public String input(Model model,HttpSession httpSession){
+        if (httpSession.getAttribute("user")!=null) {
+            User user = (User) httpSession.getAttribute("user");
+            model.addAttribute("user", user);
+            return "input";
+        }
+
+        return "redirect:/";
     }
 
     @GetMapping("/terms")
