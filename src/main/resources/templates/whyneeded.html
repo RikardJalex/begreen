@@ -7,32 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/Home.css">
     <link rel="stylesheet" href="/css/Navbar.css">
     <link rel="stylesheet" href="/css/Footer.css">
     <link rel="stylesheet" href="/css/Index.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/whyneeded.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
           crossorigin="anonymous">
-    <title>BeGreen</title>
-    <style>
-        body { background-color: rgba(78, 184, 83, 0.486); }
-      </style>
+    <title>Document</title>
 </head>
 <body>
+<!-- navbar -->
 <nav th:replace="~{/layout :: nav}"></nav>
-
-<div class="prof-box">
-    <h1> WHY IS </h1>
-    <h5> BEGREEN NEEDED? </h5>
-    <div class="line-break"></div>
-    <p>
-        <img src="https://media.giphy.com/media/k4drIzcE2mPWU/giphy.gif">
-        How many planets do we need if everybody lives like you?
-        When is your personal Overshoot Day?
-    </p>
+<!-- Input -->
+<h1 class="threed">WHY IS BEGREEN NEEDED?</h1>
+<div class="container-fluid padding">
+    <div class="row padding justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="\images\ocean.png">
+                <div class="card-body">
+                    <h4 class="card-title">You used some of your electrical devices today</h4>
+                    <p class="card-text">Did you know that by switching to a vegetarian meal plan you can save up to RANDOM NUMBER CO2 EMISSION. And not only that, vegetarian food is delicious! So not only are you helping with saving the planet, you are also treating you taste buds!</p>
+                    <!-- <a href="#" class="btn btn-outline-secondary">See More</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top justify-content-center" src="\images\cow.png">
+                <div class="card-body">
+                    <h4 class="card-title">You used some of your electrical devices today</h4>
+                    <p class="card-text">Did you know that by switching to a vegetarian meal plan you can save up to RANDOM NUMBER CO2 EMISSION. And not only that, vegetarian food is delicious! So not only are you helping with saving the planet, you are also treating you taste buds!</p>
+                    <!-- <a href="#" class="btn btn-outline-secondary">See More</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="\images\tree.png">
+                <div class="card-body">
+                    <h4 class="card-title">You used some of your electrical devices today</h4>
+                    <p class="card-text">Did you know that by switching to a vegetarian meal plan you can save up to RANDOM NUMBER CO2 EMISSION. And not only that, vegetarian food is delicious! So not only are you helping with saving the planet, you are also treating you taste buds!</p>
+                    <!-- <a href="#" class="btn btn-outline-secondary">See More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- Footer -->
 <footer th:replace="~{/layout :: footer}"></footer>
 </body>
 </html>

@@ -1,17 +1,8 @@
-.prof-box {
-    width: 450px;
-    height: 450px;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0.5;
-    padding: 40px;
-    color: white;
-    margin: 0 auto;
-    margin-top: 140px;
-    margin-bottom: 50px;
-    text-align: center;
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 50px;
+  color: rgb(27, 136, 0);
+  text-shadow: -1px 0 0 #0000009c, 2px 2px 0 #0000009c,
+  3px -1px 0 #0000009c, 4px 0 0 #0000009c;
 }
-    .line-break {
-        width: 140px;
-        margin: 0 auto;
-        border-top: 1px solid white;
-    }
