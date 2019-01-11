@@ -63,23 +63,39 @@ function switchCardToOther2() {
         document.getElementById('usageCard').style.display = 'none';
         document.getElementById('otherCard2').style.display = 'block';
     }
-    function showCarCard(){
-        document.getElementById('showCar').style.display='block';
-    }
-    
-    function showtrainCard(){
-    document.getElementById('showTrain').style.display='block';
-    }
-    function showShoppingCard(){
-    document.getElementById('showShopping').style.display='block';
-    }
-    function showMeatCard(){
-    document.getElementById('showMeat').style.display='block';
-    }
-    function showElectricCard(){
-    document.getElementById('showElectric').style.display='block';
-    }
-    function showVegCard(){
-    document.getElementById('showVeg').style.display='block';
-    }
+}
+
+
+
+function showFeedbackCards() {
+if (document.getElementById('breakfastRedMeat').checked) {
+
+    showMeatCard();
+}
+
+}
+
+
+
+
+
+function showCarCard(){
+
+    document.getElementById('showCar').style.display='block';
+}
+
+function showtrainCard(){
+document.getElementById('showTrain').style.display='block';
+}
+function showShoppingCard(){
+document.getElementById('showShopping').style.display='block';
+}
+function showMeatCard(){
+document.getElementById('showMeat').style.display='block';
+}
+function showElectricCard(){
+document.getElementById('showElectric').style.display='block';
+}
+function showVegCard(){
+document.getElementById('showVeg').style.display='block';
 }
