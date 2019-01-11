@@ -27,6 +27,10 @@
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.feedbackCard{
+height:700px;
 }
 .profile-img-card {
     width: 96px;

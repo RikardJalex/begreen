@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:spanth="http://www.w3.org/1999/XSL/Transform">
 <head>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
@@ -12,11 +13,11 @@
     <link rel="stylesheet" href="/css/Footer.css">
     <link rel="stylesheet" href="/css/Index.css">
     <link rel="stylesheet" href="/css/login.css">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
           crossorigin="anonymous">
     <title>Document</title>
+    <script type="text/javascript"  src="/css/input.js"></script>
 </head>
 <body>
 <!-- navbar -->
@@ -25,7 +26,7 @@
 <div class="container-fluid padding inputform">
     <div class="row text-center justify-content-center">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="breakfastCard">
                 <h5 class="card-header">Food</h5>
                 <div class="card-body">
                     <h5 class="card-title">Breakfast</h5>
@@ -75,11 +76,11 @@
                     <div class="checkbox">
                         <label><input type="checkbox" value="" id="breakfastNoLocProc">Not Locally Produced</label>
                     </div>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToLunch()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="lunchCard">
                 <h5 class="card-header">Food</h5>
                 <div class="card-body">
                     <h5 class="card-title">Lunch</h5>
@@ -129,11 +130,11 @@
                     <div class="checkbox">
                         <label><input type="checkbox" value="" id="lunchNoLocProc">Not Locally Produced</label>
                     </div>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToDinner()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="dinnerCard">
                 <h5 class="card-header">Food</h5>
                 <div class="card-body">
                     <h5 class="card-title">Dinner</h5>
@@ -183,11 +184,11 @@
                     <div class="checkbox">
                         <label><input type="checkbox" value="" id="dinnerNoLocProc">Not Locally Produced</label>
                     </div>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToOther1()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="otherCard1">
                 <h5 class="card-header">Food</h5>
                 <div class="card-body">
                     <h5 class="card-title">Other</h5>
@@ -237,11 +238,11 @@
                     <div class="checkbox">
                         <label><input type="checkbox" value="" id="otherNoLocProc">Not Locally Produced</label>
                     </div>
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToTransportation()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="transportationCard">
                 <h5 class="card-header">Transportation</h5>
                 <div class="card-body">
                     <h5 class="card-title">Vehicle</h5>
@@ -277,11 +278,11 @@
                         <label><input type="checkbox" value="" id="nonTrans">Non</label>
                     </div>
 
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToDistance()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="distanceCard">
                 <h5 class="card-header">Transportation</h5>
                 <div class="card-body">
                     <h5 class="card-title">Distance</h5>
@@ -302,12 +303,11 @@
                         <label><input type="checkbox" value="" id="trans9">9+h</label>
                     </div>
 
-
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToDevices()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="devicesCard">
                 <h5 class="card-header">Devices</h5>
                 <div class="card-body">
                     <h5 class="card-title">Electrical</h5>
@@ -331,11 +331,11 @@
                         <label><input type="checkbox" value="" id="devNon">Non</label>
                     </div>
 
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToUsage()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="usageCard">
                 <h5 class="card-header">Devices</h5>
                 <div class="card-body">
                     <h5 class="card-title">Usage Time</h5>
@@ -356,12 +356,11 @@
                         <label><input type="checkbox" value="" id="deb9">9+h</label>
                     </div>
 
-
-                    <a href="#" class="btn btn-primary">Submit</a>
+                    <a href="#" onclick="switchCardToOther2()" class="btn btn-primary">Submit</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div style="display: none" class="card" id="otherCard2">
                 <h5 class="card-header">Other</h5>
                 <div class="card-body">
                     <h5 class="card-title">Other</h5>
@@ -396,8 +395,8 @@
 </div>
 <div class="container-fluid padding">
     <div class="row padding justify-content-center">
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-md-4" id="showCar">
+            <div class="card" >
                 <img class="card-img-top img-thumbnail" src="/images/car.png">
 
                 <div class="card-body">
@@ -407,8 +406,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-md-4" id="showMeat">
+            <div class="card" >
                 <img class="card-img-top img-thumbnail" src="/images/meat.png">
                 <div class="card-body">
                     <h4 class="card-title">You ate some meat today</h4>
@@ -417,8 +416,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-md-4" id="showTrain">
+            <div class="card" >
                 <img class="card-img-top" src="/images/train.jpg">
                 <div class="card-body">
                     <h4 class="card-title">You took the train today</h4>
@@ -427,8 +426,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-md-4" id="showVeg">
+            <div class="card" >
                 <img class="card-img-top" src="/images/veg.jpg">
                 <div class="card-body">
                     <h4 class="card-title">All your meals were vegetarian today</h4>
@@ -437,8 +436,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+        <div class="col-md-4" id="showShopping">
+            <div class="card" >
                 <img class="card-img-top" src="/images/shopping.jpg">
                 <div class="card-body">
                     <h4 class="card-title">You went shopping today</h4>
@@ -447,7 +446,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="showElectric">
             <div class="card">
                 <img class="card-img-top" src="/images/electrical.jpg">
                 <div class="card-body">
@@ -461,6 +460,5 @@
 </div>
 <!-- Footer -->
 <footer th:replace="~{/layout :: footer}"></footer>
-
 </body>
 </html>
