@@ -9,6 +9,39 @@ function myFunction() {
   }
 }*/
 
+/*$(function hideCar () {
+console.log("heJJJJJ");
+     $('#showCar').removeClass('hidden');
+ });*/
+
+$( document ).ready(function() {
+   $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric').hide();
+
+
+
+
+   $( "#showFeedbackCards" ).click(function() {
+        $("#showMeat").show();
+        $('#otherCard2').hide();
+
+   });
+
+
+});
+
+/*$('#showFeedbackCards').on('click', function(foo) {
+    console.log("hejjjj");*/
+
+
+    /*if($("#otherOverShower10").is(':checked'))
+         console.log("hej")
+             $("#showMeat").show();
+
+     });*/
+
+
+
+
 function switchCardToLunch() {
     if (document.getElementById('breakfastCard')) {
         document.getElementById('breakfastCard').style.display = 'none';
@@ -67,17 +100,14 @@ function switchCardToOther2() {
 
 
 
-function showFeedbackCards() {
+
+/*function showFeedbackCards() {
 if (document.getElementById('breakfastRedMeat').checked) {
 
     showMeatCard();
 }
 
 }
-
-
-
-
 
 function showCarCard(){
 
@@ -98,4 +128,4 @@ document.getElementById('showElectric').style.display='block';
 }
 function showVegCard(){
 document.getElementById('showVeg').style.display='block';
-}
+}*/
