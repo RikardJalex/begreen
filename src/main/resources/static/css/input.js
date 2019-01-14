@@ -21,8 +21,13 @@ $( document ).ready(function() {
 
 
    $( "#showFeedbackCards" ).click(function() {
-        $("#showMeat").show();
-        $('#otherCard2').hide();
+
+    if($("#otherOverShower10").is(':checked'))
+                console.log("Hej Viktor");
+             $("#showMeat, #showCar").show();
+
+        // $("#showMeat").show();
+        // $('#otherCard2').hide();
 
    });
 
