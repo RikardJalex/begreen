@@ -17,35 +17,39 @@ console.log("heJJJJJ");
 $( document ).ready(function() {
    $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric').hide();
 
-
-
-
    $( "#showFeedbackCards" ).click(function() {
 
-    if($("#otherOverShower10").is(':checked'))
-                console.log("Hej Viktor");
-             $("#showMeat, #showCar").show();
+        if($("#breakfastMeat").is(':checked') || $("#lunchMeat").is(':checked') || $("#dinnerMeat").is(':checked')) {
+            $("#showMeat").show();
+        }
 
-        // $("#showMeat").show();
-        // $('#otherCard2').hide();
+        if($("#vehicleCar").is(':checked')) {
+            $("#showCar").show();
+        }
+
+        if($("#breakfastMeat").is(":not(:checked)") && $("#lunchMeat").is(":not(:checked)") && $("#dinnerMeat").is(":not(:checked)") && $("#breakfastFish").is(":not(:checked)") && $("#lunchFish").is(":not(:checked)") && $("#dinnerFish").is(":not(:checked)") && $("#otherMeat").is(":not(:checked)") && $("#otherFish").is(":not(:checked)")) {
+            console.log("första if-satsen");
+            if($("#breakfastVeg").is(':checked') && $("#lunchVeg").is(':checked') && $("#dinnerVeg").is(':checked') && $("#otherVeg").is(':checked')) {
+                $("#showVeg").show();
+                $("#showMeat").hide();
+            }
+        }
+
+        if ($("#otherShopNew").is(':checked') || $("#otherShop2Hand").is(':checked') ) {
+            $("#showShopping").show();
+        }
+
+        if($("#tv").is(':checked') || ($("#computer").is(':checked')) || ($("#phone").is(':checked')) ||($("#kitchenApp").is(':checked')) ){
+            $("#showElectric").show();
+        }
+
+        if($("#vehicletrain").is(':checked')) {
+            $("#showTrain").show();
+        }
 
    });
 
-
 });
-
-/*$('#showFeedbackCards').on('click', function(foo) {
-    console.log("hejjjj");*/
-
-
-    /*if($("#otherOverShower10").is(':checked'))
-         console.log("hej")
-             $("#showMeat").show();
-
-     });*/
-
-
-
 
 function switchCardToLunch() {
     if (document.getElementById('breakfastCard')) {
@@ -103,34 +107,9 @@ function switchCardToOther2() {
     }
 }
 
-
-
-
-/*function showFeedbackCards() {
-if (document.getElementById('breakfastRedMeat').checked) {
-
-    showMeatCard();
+function hideCards() {
+    if (document.getElementById('otherCard2')) {
+        document.getElementById('otherCard2').style.display = 'none';
+    }
 }
 
-}
-
-function showCarCard(){
-
-    document.getElementById('showCar').style.display='block';
-}
-
-function showtrainCard(){
-document.getElementById('showTrain').style.display='block';
-}
-function showShoppingCard(){
-document.getElementById('showShopping').style.display='block';
-}
-function showMeatCard(){
-document.getElementById('showMeat').style.display='block';
-}
-function showElectricCard(){
-document.getElementById('showElectric').style.display='block';
-}
-function showVegCard(){
-document.getElementById('showVeg').style.display='block';
-}*/
