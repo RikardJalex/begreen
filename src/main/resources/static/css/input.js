@@ -16,7 +16,7 @@ console.log("heJJJJJ");
 
 $( document ).ready(function() {
     let counter = 0;
-   $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric').hide();
+   $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric, #showNotLocalProd, #showLocalProd, #showAirplane, #showShopping2Hand, #showBus, #showSomeVeggies').hide();
 
    $( "#showFeedbackCards" ).click(function() {
 
@@ -40,7 +40,7 @@ $( document ).ready(function() {
 
             $("#showMeat").show();
         }
-
+        console.log(counter);
 
         if($("#vehicleCar").is(':checked')) {
             $("#showCar").show();
@@ -65,6 +65,8 @@ $( document ).ready(function() {
         if($("#vehicletrain").is(':checked')) {
             $("#showTrain").show();
         }
+
+        
 
    });
 
