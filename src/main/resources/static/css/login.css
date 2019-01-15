@@ -18,8 +18,8 @@
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
-    margin-top: 50px;
-    margin-bottom: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -27,10 +27,15 @@
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
+    text-align: left !important;
 }
+
+.checkbox {
+    padding-top: 12px;
+}
+
 .feedbackCard{
-height:700px;
+    height:700px;
 }
 .profile-img-card {
     width: 96px;
@@ -51,6 +56,7 @@ height:700px;
     margin: 10px 0 0;
     min-height: 1em;
 }
+
 .reauth-email {
     display: block;
     color: #404040;
@@ -65,12 +71,14 @@ height:700px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .form-signin #inputEmail,
 .form-signin #inputPassword {
     direction: ltr;
     height: 44px;
     font-size: 16px;
 }
+
 .form-signin input[type=email],
 .form-signin input[type=password],
 .form-signin input[type=text],
@@ -86,12 +94,14 @@ height:700px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .form-signin .form-control:focus {
     border-color: rgb(104, 145, 162);
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
 }
+
 .btn.btn-signin {
     /*background-color: #4d90fe; */
     background-color: rgb(104, 145, 162);
@@ -109,6 +119,7 @@ height:700px;
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
 }
+
 .btn-register {
         /*background-color: #4d90fe; */
         background-color: rgb(104, 145, 162);
@@ -126,35 +137,43 @@ height:700px;
         -webkit-transition: all 0.218s;
         transition: all 0.218s;
 }
+
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
     background-color: rgb(12, 97, 33);
 }
+
 .btn-register:hover,
 .btn-register:active,
 .btn-register:focus {
     background-color: rgb(12, 97, 33);
 }
+
 .forgot-password {
     color: rgb(104, 145, 162);
 }
+
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+
 .not-a-user {
     color: rgb(104, 145, 162);
 }
+
 .not-a-user:hover,
 .not-a-user:active,
 .not-a-user:focus{
     color: rgb(12, 97, 33);
 }
+
 .terms{
-text-align: left !important;
+    text-align: left !important;
 }
+
 .registerlink{
-color: #0000EE !important;
+    color: #0000EE !important;
 }

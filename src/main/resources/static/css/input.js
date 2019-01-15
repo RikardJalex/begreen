@@ -40,32 +40,146 @@ $( document ).ready(function() {
 
             $("#showMeat").show();
         }
-        console.log(counter);
 
         if($("#vehicleCar").is(':checked')) {
+            counter += 5;
             $("#showCar").show();
         }
 
         if($("#breakfastMeat").is(":not(:checked)") && $("#lunchMeat").is(":not(:checked)") && $("#dinnerMeat").is(":not(:checked)") && $("#breakfastFish").is(":not(:checked)") && $("#lunchFish").is(":not(:checked)") && $("#dinnerFish").is(":not(:checked)") && $("#otherMeat").is(":not(:checked)") && $("#otherFish").is(":not(:checked)")) {
-            console.log("första if-satsen");
             if($("#breakfastVeg").is(':checked') && $("#lunchVeg").is(':checked') && $("#dinnerVeg").is(':checked') && $("#otherVeg").is(':checked')) {
+                if($("#breakfastVeg").is(':checked')) {
+                    counter ++;
+                }
+
+                if($("#lunchVeg").is(':checked')) {
+                    counter ++;
+                }
+
+                if($("#dinnerVeg").is(':checked')) {
+                    counter ++;
+                }
+
+                if($("#otherVeg").is(':checked')) {
+                    counter ++;
+                }
+
                 $("#showVeg").show();
                 $("#showMeat").hide();
             }
         }
 
-        if ($("#otherShopNew").is(':checked') || $("#otherShop2Hand").is(':checked') ) {
+        if ($("#otherShopNew").is(':checked') || $("#otherShop2Hand").is(':checked')) {
+            if ($("#otherShopNew").is(':checked')) {
+                counter += 5;
+            }
+
+            if ($("#otherShop2Hand").is(':checked')) {
+                //ifall vi ändrar värdet för 2Hand till annat än 0
+            }
+
             $("#showShopping").show();
         }
 
-        if($("#tv").is(':checked') || ($("#computer").is(':checked')) || ($("#phone").is(':checked')) ||($("#kitchenApp").is(':checked')) ){
+        if($("#tv").is(':checked') || ($("#computer").is(':checked')) || ($("#phone").is(':checked')) ||($("#kitchenApp").is(':checked')) || ($("#devOther").is(':checked')) ){
+            if($("#tv").is(':checked')) {
+                counter += 3;
+            }
+
+            if($("#computer").is(':checked')) {
+                counter += 3;
+            }
+
+            if($("#phone").is(':checked')) {
+                counter += 1;
+            }
+
+            if($("#kitchenApp").is(':checked')) {
+                counter += 2;
+            }
+
+            if($("#devOther").is(':checked')) {
+                counter += 1;
+            }
+
             $("#showElectric").show();
         }
 
         if($("#vehicletrain").is(':checked')) {
+            counter += 2;
             $("#showTrain").show();
         }
 
+        //
+
+        if($("#breakfastVeg").is(':checked') || $("#lunchVeg").is(':checked') || $("#dinnerVeg").is(':checked') || $("#otherVeg").is(':checked')) {
+            if($("#breakfastVeg").is(':checked')) {
+                counter +=1;
+            }
+            if($("#lunchVeg").is(':checked')){
+                 counter +=1;
+            }
+
+            if($("#dinnerVeg").is(':checked')){
+                counter +=1;
+            }
+
+            if($("#otherVeg").is(':checked')){
+                 counter +=1;
+             }
+
+            $("#showSomeVeggies").show();
+        }
+
+        if($("#breakfastLocProd").is(':checked') || $("#lunchLocProd").is(':checked') || $("#dinnerLocProd").is(':checked') || $("#otherLocProd").is(':checked')) {
+            if($("#breakfastLocProd").is(':checked')){
+            counter ++;
+            }
+            if($("#lunchLocProd").is(':checked')){
+                counter ++;
+            }
+            if($("#dinnerLocProd").is(':checked')){
+                counter ++;
+            }
+            if($("#otherLocProd").is(':checked')){
+                counter ++;
+            }
+
+            $("#showLocalProd").show();
+        }
+
+        if($("#breakfastNoLocProc").is(':checked') || $("#lunchNoLocProc").is(':checked') || $("#dinnerNoLocProc").is(':checked') || $("#otherNoLocProc").is(':checked')) {
+            if($("#breakfastNoLocProc").is(':checked')){
+                counter += 8;
+            }
+            if($("#lunchNoLocProc").is(':checked')){
+            counter += 8;
+            }
+            if($("#dinnerNoLocProc").is(':checked')){
+                counter += 8;
+            }
+            if($("#otherNoLocProc").is(':checked')){
+                counter += 8;
+            }
+
+            $("#showNotLocalProd").show();
+        }
+
+        if($("#vehicleairplane").is(':checked')) {
+            counter += 15;
+            $("#showAirplane").show();
+        }
+
+        if($("#otherShop2Hand").is(':checked')) {
+            //Kan lägga till counter om 2Hand ändrar värde
+            $("#showShopping2Hand").show();
+        }
+
+        if($("#vehicleLocal").is(':checked')) {
+            counter += 3;
+            $("#showBus").show();
+        }
+        console.log(counter);
         
 
    });
