@@ -15,13 +15,32 @@ console.log("heJJJJJ");
  });*/
 
 $( document ).ready(function() {
+    let counter = 0;
    $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric').hide();
 
    $( "#showFeedbackCards" ).click(function() {
 
-        if($("#breakfastMeat").is(':checked') || $("#lunchMeat").is(':checked') || $("#dinnerMeat").is(':checked')) {
+        if($("#breakfastMeat").is(':checked') || $("#lunchMeat").is(':checked') || $("#dinnerMeat").is(':checked') || $("#otherMeat").is(':checked')) {
+
+            if($("#breakfastMeat").is(':checked')) {
+                counter += 5;
+            }
+
+            if($("#lunchMeat").is(':checked')) {
+                counter += 5;
+            }
+
+            if($("#dinnerMeat").is(':checked')) {
+                counter += 5;
+            }
+
+            if($("#otherMeat").is(':checked')) {
+                counter += 5;
+            }
+
             $("#showMeat").show();
         }
+
 
         if($("#vehicleCar").is(':checked')) {
             $("#showCar").show();
