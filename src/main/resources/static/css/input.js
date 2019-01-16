@@ -16,7 +16,9 @@ console.log("heJJJJJ");
 
 $( document ).ready(function() {
     let counter = 0;
-   $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric, #showNotLocalProd, #showLocalProd, #showAirplane, #showShopping2Hand, #showBus, #showSomeVeggies').hide();
+    $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric, #showNotLocalProd, #showLocalProd, #showAirplane, #showShopping2Hand, #showBus, #showSomeVeggies, #show1P, #show2P, #show3P, #show4P, #show5P, #show6P, #show7P, #show8P, #show9P').hide();
+
+
 
    $( "#showFeedbackCards" ).click(function() {
 

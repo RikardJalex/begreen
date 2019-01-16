@@ -34,3 +34,8 @@ background-color: rgba(78, 184, 83, 0.486)!important;
 .navbar.navbar-light.bg-light {
 background-color: inherit !important;
 }
+
+.navbarLogo {
+    padding: 0px;
+    height: 45px;
+}

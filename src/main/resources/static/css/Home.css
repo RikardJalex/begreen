@@ -6,7 +6,6 @@
     height: 25%;
     margin-top: 30px;
     margin-bottom: 50px;
-
 }
 .logo {
     display: block;
@@ -16,22 +15,34 @@
     height: 10%;
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
 .prof-box {
     width: 450px;
     height: 450px;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0.5;
+    background-color: rgb(7, 87, 0);
+    opacity: 0.7;
     padding: 40px;
     color: white;
     margin: 0 auto;
     margin-top: 140px;
     text-align: center;
 }
-
     .line-break {
         width: 140px;
         margin: 0 auto;
         border-top: 1px solid white;
+    }
+    .buttonStart {
+        border: 1.5px solid black;
+        outline: 0;
+        display: inline-block;
+        padding: 10px;
+        color: rgb(7, 87, 0);
+        background-color: #f4f4f4;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 700;
+        width: 70%;
+        border-radius: 20px;
+        margin-top: 30px;
     }

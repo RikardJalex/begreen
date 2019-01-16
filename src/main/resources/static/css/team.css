@@ -44,6 +44,27 @@ cursor: pointer;
 width: 100%;
 border-radius: 20px;
 }
+
 .button:hover {
 background-color: #555;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    background-color: #f4f4f4;
+    color: rgba(78, 184, 83, 0.486);
+    border-styles: solid;
+    border: 15px;
+    border-color: rgba(78, 184, 83, 0.486);
+    font-size: 16px;
+    padding-bottom: 26px;
+}
+
+.btn:hover {
+    background-color: rgba(78, 184, 83, 0.486);
 }

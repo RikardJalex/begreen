@@ -11,9 +11,7 @@
     cursor: default;
     background-color: #f4f4f4;
     color: rgba(78, 184, 83, 0.486);
-    border-styles: solid;
-    border: 15px;
-    border-color: rgba(78, 184, 83, 0.486);
+    border: 2px solid rgba(78, 184, 83, 0.486);
 }
 
 .btn:hover {
@@ -37,9 +35,8 @@ background-color: rgba(78, 184, 83, 0.486);
     cursor: default;
     background-color: #f4f4f4;
     color: rgba(78, 184, 83, 0.486);
-    border-styles: solid;
-    border: 15px;
-    border-color: rgba(78, 184, 83, 0.486);
+    border: 2px solid rgba(78, 184, 83, 0.486);
+
     font-size: 29px;
     padding-bottom: 45px;
 }
@@ -53,9 +50,7 @@ background-color: rgba(78, 184, 83, 0.486);
     cursor: default;
     background-color: #f4f4f4;
     color: rgba(78, 184, 83, 0.486);
-    border-styles: solid;
-    border: 15px;
-    border-color: rgba(78, 184, 83, 0.486);
+    border: 2px solid rgba(78, 184, 83, 0.486);
     font-size: 29px;
     padding-bottom: 45px;
 }
