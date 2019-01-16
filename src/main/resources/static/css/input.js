@@ -253,25 +253,25 @@ $( document ).ready(function() {
 
 
         if(counter <= 15) {
-            document.getElementById('show10P').style.display = 'block';
-        } else if (counter <= 18) {
-            document.getElementById('show9P').style.display = 'block';
-        } else if (counter <= 21) {
-            document.getElementById('show8P').style.display = 'block';
-        } else if (counter <= 24) {
-            document.getElementById('show7P').style.display = 'block';
-        } else if (counter <= 27) {
-            document.getElementById('show6P').style.display = 'block';
-        } else if (counter <= 30) {
-            document.getElementById('show5P').style.display = 'block';
-        } else if (counter <= 33) {
-            document.getElementById('show4P').style.display = 'block';
-        } else if (counter <= 36) {
-            document.getElementById('show3P').style.display = 'block';
-        } else if (counter <= 39) {
-            document.getElementById('show2P').style.display = 'block';
-        } else if (counter >= 40) {
-            document.getElementById('show1P').style.display = 'block';
+                document.getElementById('show10P').style.display = 'block';
+            } else if (counter <= 20) {
+                document.getElementById('show9P').style.display = 'block';
+            } else if (counter <= 25) {
+                document.getElementById('show8P').style.display = 'block';
+            } else if (counter <= 30) {
+                document.getElementById('show7P').style.display = 'block';
+            } else if (counter <= 35) {
+                document.getElementById('show6P').style.display = 'block';
+            } else if (counter <= 40) {
+                document.getElementById('show5P').style.display = 'block';
+            } else if (counter <= 45) {
+                document.getElementById('show4P').style.display = 'block';
+            } else if (counter <= 50) {
+                document.getElementById('show3P').style.display = 'block';
+            } else if (counter <= 55) {
+                document.getElementById('show2P').style.display = 'block';
+            } else if (counter >= 56) {
+                document.getElementById('show1P').style.display = 'block';
         }
 
    });
