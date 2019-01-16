@@ -16,14 +16,44 @@
 
 .btn:hover {
 background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
+}
+
+.btn:active {
+background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
+}
+
+.btn:active.btn-primary:active {
+background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
+}
+
+btn:active.btn-outline-primary:active.ml-sm-2:active {
+background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
 }
 
 .btn:hover.btn-lg:hover.btn-primary:hover.btn-block:hover.btn-signin:hover {
 background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
 }
+
+.btn:active.btn-lg:active.btn-primary:active.btn-block:active.btn-signin:active {
+background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
+}
+
+
 
 .btn:hover.btn-lg:hover.btn-primary:hover.btn-block:hover.btn-register:hover {
 background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
+}
+
+.btn:active.btn-lg:active.btn-primary:active.btn-block:active.btn-register:active {
+background-color: rgba(78, 184, 83, 0.486);
+border: 2px solid rgba(78, 184, 83, 0.486);
 }
 
 .btn.btn-lg.btn-primary.btn-block.btn-signin {

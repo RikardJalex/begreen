@@ -31,6 +31,14 @@ public class SiteController {
 
         return "login";
     }
+
+    @GetMapping ("/howdoesitwork")
+    public String howdoesitwork(){
+
+        return "explainScore";
+    }
+
+
     @PostMapping ("/login")
     public String checkIfLogedIn(@RequestParam String email,@RequestParam String password, HttpSession httpSession){
         httpSession.setAttribute("user",null);
