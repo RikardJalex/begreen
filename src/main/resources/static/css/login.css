@@ -12,6 +12,8 @@
     background-color: #f4f4f4;
     color: rgba(78, 184, 83, 0.486);
     border: 2px solid rgba(78, 184, 83, 0.486);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .btn:hover {
@@ -311,4 +313,8 @@ border: 2px solid rgba(78, 184, 83, 0.486);
   transform: scale(1);
 }
 
+
+.styleFeedbackCard {
+background-image: url("https://wallpaperstock.net/vista-green-leafs-wallpapers_3902_1024x768.jpg");
+}
 

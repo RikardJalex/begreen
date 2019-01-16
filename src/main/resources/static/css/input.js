@@ -181,6 +181,54 @@ $( document ).ready(function() {
             counter += 3;
             $("#showBus").show();
         }
+
+        if($("#otherNewsMag").is(':checked')) {
+                    counter += 3;
+                }
+
+        if($("#otherWash").is(':checked')) {
+            counter += 2;
+        }
+
+        if($("#dev02").is(':checked')) {
+           counter ++;
+        }
+
+        if($("#dev34").is(':checked')) {
+           counter +=2;
+        }
+
+        if($("#dev56").is(':checked')) {
+           counter +=3;
+        }
+
+        if($("#dev78").is(':checked')) {
+           counter +=4;
+        }
+
+        if($("#deb9").is(':checked')) {
+           counter +=5;
+        }
+
+        if($("#trans02").is(':checked')) {
+           counter ++;
+        }
+
+        if($("#trans34").is(':checked')) {
+           counter +=2;
+        }
+
+        if($("#trans56").is(':checked')) {
+           counter +=3;
+        }
+
+        if($("#trans78").is(':checked')) {
+           counter +=4;
+        }
+
+        if($("#trans9").is(':checked')) {
+           counter +=5;
+        }
         console.log(counter);
         
 
