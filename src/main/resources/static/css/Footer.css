@@ -1,5 +1,14 @@
 footer {
-    background-color: #3f3f3f;
-    color: #d5d5d5;
+    background-color: rgba(78, 184, 83, 0.486)!important;
+    color: black;
     padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+a {
+color: black;
+}
+
+a:hover {
+color: white;
 }
