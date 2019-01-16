@@ -16,7 +16,7 @@ console.log("heJJJJJ");
 
 $( document ).ready(function() {
     let counter = 0;
-    $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric, #showNotLocalProd, #showLocalProd, #showAirplane, #showShopping2Hand, #showBus, #showSomeVeggies, #show1P, #show2P, #show3P, #show4P, #show5P, #show6P, #show7P, #show8P, #show9P').hide();
+    $('#showCar, #showMeat, #showTrain, #showVeg, #showShopping, #showElectric, #showNotLocalProd, #showLocalProd, #showAirplane, #showShopping2Hand, #showBus, #showSomeVeggies, #show1P, #show2P, #show3P, #show4P, #show5P, #show6P, #show7P, #show8P, #show9P, #show10P').hide();
 
 
 
@@ -230,7 +230,49 @@ $( document ).ready(function() {
            counter +=5;
         }
         console.log(counter);
-        
+
+        if($("#breakfastDairy").is(':checked') || $("#lunchDairy").is(':checked') || $("#dinnerDairy").is(':checked') || $("#otherDairy").is(':checked')){
+
+            if($("#breakfastDairy").is(':checked')) {
+                counter += 2;
+            }
+
+            if($("#lunchDairy").is(':checked')) {
+                counter += 2;
+            }
+
+            if($("#dinnerDairy").is(':checked')) {
+                counter += 2;
+            }
+
+            if($("#otherDairy").is(':checked')) {
+                counter += 2;
+            }
+        }
+
+
+
+        if(counter <= 15) {
+            document.getElementById('show10P').style.display = 'block';
+        } else if (counter <= 18) {
+            document.getElementById('show9P').style.display = 'block';
+        } else if (counter <= 21) {
+            document.getElementById('show8P').style.display = 'block';
+        } else if (counter <= 24) {
+            document.getElementById('show7P').style.display = 'block';
+        } else if (counter <= 27) {
+            document.getElementById('show6P').style.display = 'block';
+        } else if (counter <= 30) {
+            document.getElementById('show5P').style.display = 'block';
+        } else if (counter <= 33) {
+            document.getElementById('show4P').style.display = 'block';
+        } else if (counter <= 36) {
+            document.getElementById('show3P').style.display = 'block';
+        } else if (counter <= 39) {
+            document.getElementById('show2P').style.display = 'block';
+        } else if (counter >= 40) {
+            document.getElementById('show1P').style.display = 'block';
+        }
 
    });
 
