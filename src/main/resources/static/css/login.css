@@ -316,6 +316,22 @@ border: 2px solid rgba(78, 184, 83, 0.486);
 
 .styleFeedbackCard {
 background-image: url("/images/opaqFeedback2.png");
+background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.backgroundHomepage {
+background-image: url("/images/background2.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+body {
+
+font-family: 'Nunito', sans-serif;
 
 }
 

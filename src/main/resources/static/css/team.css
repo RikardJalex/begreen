@@ -66,5 +66,11 @@ background-color: #555;
 }
 
 .btn:hover {
-    background-color: rgba(78, 184, 83, 0.486);
-}
+     background-color: rgba(78, 184, 83, 0.486);
+ }
+
+ body {
+
+ font-family: 'Nunito', sans-serif;
+
+ }

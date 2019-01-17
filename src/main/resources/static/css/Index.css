@@ -2,7 +2,12 @@
     margin-top: 5rem;
 }
 .card {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+
+}
+
+.h-100 {
+    margin-bottom: 5rem !important;
 }
 
 .card i {
@@ -20,6 +25,7 @@ body{
     background-size: 25rem;
     background-attachment: fixed;
     background-color: #f4f4f4;
+    font-family: 'Nunito', sans-serif;
 
 
 }

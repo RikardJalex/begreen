@@ -5,3 +5,15 @@ h1 {
   color: rgb(27, 136, 0);
 
 }
+
+body {
+
+font-family: 'Nunito', sans-serif;
+
+}
+
+.card-text {
+    word-wrap:
+    break-word;
+    padding-bottom: 5px;
+}
