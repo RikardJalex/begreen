@@ -224,6 +224,19 @@ border: 2px solid rgba(78, 184, 83, 0.486);
         transition: all 0.218s;
 }
 
+
+.btn.btn-lg.btn-primary.btn-block.btn-signin {
+ overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+
+}
+
+
+
+
+
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
@@ -318,6 +331,11 @@ border: 2px solid rgba(78, 184, 83, 0.486);
 background-image: url("/images/opaqFeedback2.png");
 background-size: cover;
     background-repeat: no-repeat;
+
+}
+
+.cardTeam {
+margin-bottom: 10px;
 
 }
 

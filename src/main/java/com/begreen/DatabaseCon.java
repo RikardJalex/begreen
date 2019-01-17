@@ -67,6 +67,22 @@ public class DatabaseCon {
         }
         return null;
     }
+    public boolean checkIfEmailExists(String email){
+        try {
+            String query = "select * from users where Email =? ";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1,email);
+
+            ResultSet resultSet = stmt.executeQuery();
+
+            if (resultSet.next()){
+                return true;
+            }
+        }catch (SQLException e){
+            System.out.println("något gick fel" + e);
+        }
+        return false;
+    }
     public boolean checkLogin(String email,String password){
         System.out.println("Nu går vi in");
 

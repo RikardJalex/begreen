@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/Footer.css">
     <link rel="stylesheet" href="/css/Index.css">
     <link rel="stylesheet" href="/css/Navbar.css">
+    <link rel="stylesheet" href="/css/login.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -22,53 +23,53 @@
 
 </head>
 <body>
-<nav th:replace="~{/layout :: nav}"></nav>
+<nav th:replace="~{layout :: nav}"></nav>
 <div class="row">
     <div class="column">
-        <div class="card">
-            <img src="\images\viktor.jpg" alt="Jane" style="width:100%">
+        <div class="card cardTeam styleFeedbackCard h-100">
+            <img src="\images\viktor.png" alt="Viktor" style="width:100%">
             <div class="container">
-                <h2>Viktor Gustafsson</h2>
+                <h2>Viktor<br/> Gustafsson</h2>
                 <p class="title">Developer</p>
                 <p>viktor@begreen.com</p>
-                <p><button class="button">Contact</button></p>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Contact</button>
             </div>
         </div>
     </div>
     <div class="column">
-        <div class="card">
-            <img src="\images\johan.jpg" alt="Mike" style="width:100%">
+        <div class="card cardTeam styleFeedbackCard h-100">
+            <img src="\images\johan.png" alt="Johan" style="width:100%">
             <div class="container">
-                <h2>Johan Mackegård</h2>
+                <h2>Johan<br/> Mackegård</h2>
                 <p class="title">Developer</p>
                 <p>johan@begreen.com</p>
-                <p><button class="button">Contact</button></p>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Contact</button>
             </div>
         </div>
     </div>
     <div class="column">
-        <div class="card">
-            <img src="\images\hamid.jpg" alt="John" style="width:100%">
+        <div class="card cardTeam styleFeedbackCard h-100">
+            <img src="\images\hamid.png" alt="Hamid" style="width:100%">
             <div class="container">
-                <h2>Hamid Erfani</h2>
+                <h2>Hamid<br/> Erfani</h2>
                 <p class="title">Developer</p>
                 <p>hamid@begreen.com</p>
-                <p><button class="button">Contact</button></p>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Contact</button>
             </div>
         </div>
     </div>
     <div class="column">
-        <div class="card">
-            <img src="\images\rikard.jpg" alt="John" style="width:100%">
+        <div class="card cardTeam styleFeedbackCard h-100">
+            <img src="\images\Rikard.png" alt="Rikard" style="width:100%">
             <div class="container">
-                <h2>Rikard Jalex</h2>
+                <h2>Rikard<br/> Jalex</h2>
                 <p class="title">Developer</p>
                 <p>rikard@begreen.com</p>
-                <p><button class="button">Contact</button></p>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Contact</button>
             </div>
         </div>
     </div>
 </div>
-<footer th:replace="~{/layout :: footer}"></footer>
+<footer th:replace="~{layout :: footer}"></footer>
 </body>
 </html>

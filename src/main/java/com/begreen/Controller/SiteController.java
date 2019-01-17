@@ -45,7 +45,7 @@ public class SiteController {
         User user= databaseCon.getUserLogin(email,password);
         if (user==null){
             return "redirect:/login";
-       }
+        }
         httpSession.setAttribute("user",user);
         return "redirect:/";
     }
@@ -58,22 +58,37 @@ public class SiteController {
 
     @PostMapping("/profile")
     public String checkRegister(@RequestParam String firstname,@RequestParam String lastname, @RequestParam String email, @RequestParam String password, @RequestParam String confirmPassword, HttpSession httpSession) {
-        databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
-        System.out.println(email + " " + password + " " + confirmPassword);
+        boolean isEmailAlreadyRegistered = databaseCon.checkIfEmailExists(email);
+        if (isEmailAlreadyRegistered){
+            return "redirect:/register";
+        }
+        boolean isRegisteredCorrect = databaseCon.createUser(firstname,lastname, email, password, confirmPassword);
 
-        httpSession.setAttribute("user",true);
-        databaseCon.checkLogin(email, password);
-        return "profile";
+        if (!isRegisteredCorrect) {
+            return "redirect:/register";
+        }
+        httpSession.setAttribute("user",null);
+        User user= databaseCon.getUserLogin(email,password);
+
+        if (user==null){
+            return "redirect:/login";
+        }
+        httpSession.setAttribute("user",user);
+        System.out.println(email + " " + password + " " + confirmPassword);
+        return "redirect:/profile";
     }
 
     @GetMapping("/profile")
     public String userLogin(Model model,HttpSession httpSession) {
+        System.out.println("Nu är vi inne i getmapping profile");
         if (httpSession.getAttribute("user")!=null){
+            System.out.println("Nu är vi inne i if satsen i getmapping profile");
             User user = (User)httpSession.getAttribute("user");
             model.addAttribute("user",user);
+            System.out.println(user);
             return "profile";
         }
-
+        System.out.println("Getusern är null");
         return "redirect:/";
     }
 
@@ -89,10 +104,12 @@ public class SiteController {
     public String team(){
         return "team";
     }
+
     @GetMapping("/whyneeded")
     public String wheneeded(){
         return "whyneeded";
     }
+
     @GetMapping("/input")
     public String input(Model model,HttpSession httpSession){
         if (httpSession.getAttribute("user")!=null) {
@@ -109,6 +126,13 @@ public class SiteController {
         return "terms";
     }
 
+    @GetMapping("/forgotpassword")
+    public String forgotpassword() {
 
+        return "forgotPassword";
+    }
 
 }
+
+
+
