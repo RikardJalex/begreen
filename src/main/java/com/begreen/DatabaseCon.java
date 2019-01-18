@@ -8,8 +8,8 @@ import java.sql.*;
 
 @Component
 public class DatabaseCon {
-    private Connection connection = connect("jdbc:mysql://aa19e3r4r1svpau.cg0tr7r5bkg7.us-east-2.rds.amazonaws.com:3306/ebdb");
-
+    private Connection connection = connect("jdbc:mysql://localhost:3306/begreen?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+//    jdbc:mysql://aa19e3r4r1svpau.cg0tr7r5bkg7.us-east-2.rds.amazonaws.com:3306/ebdb
     private Connection connect(String url) {
         System.out.println("Creating connection..");
         try {
