@@ -129,7 +129,7 @@ public class SiteController {
     @GetMapping("/forgotpassword")
     public String forgotpassword() {
 
-        return "forgotPassword";
+        return "forgotpassword";
     }
 
 }
